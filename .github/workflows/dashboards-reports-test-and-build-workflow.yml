@@ -21,7 +21,7 @@ jobs:
         with:
           repository: opensearch-project/Opensearch-Dashboards
           ref: ${{ env.OPENSEARCH_VERSION }}
-          path: OpenSearch-Dashboards
+          path: ../OpenSearch-Dashboards
 
       - name: Get node version
         id: versions_step
