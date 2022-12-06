@@ -38,7 +38,7 @@ jobs:
       - name: Move Dashboards Reports to Plugins Dir
         run: |
           cd ..
-          mv dashboards-reports ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+          mv dashboards-reporting ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
@@ -138,7 +138,7 @@ jobs:
       - name: Move Dashboards Reports to Plugins Dir
         run: |
           cd ..
-          mv dashboards-reports ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+          mv dashboards-reporting ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
@@ -216,7 +216,7 @@ jobs:
       - name: Move Dashboards Reports to Plugins Dir
         run: |
           cd ..
-          mv dashboards-reports ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+          mv dashboards-reporting ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
