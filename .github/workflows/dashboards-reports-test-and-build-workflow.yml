@@ -21,7 +21,7 @@ jobs:
         with:
           repository: opensearch-project/Opensearch-Dashboards
           ref: ${{ env.OPENSEARCH_VERSION }}
-          path: ../OpenSearch-Dashboards
+          path: OpenSearch-Dashboards
 
       - name: Get node version
         id: versions_step
@@ -34,11 +34,10 @@ jobs:
           node-version: ${{ steps.versions_step.outputs.node_version }}
           registry-url: 'https://registry.npmjs.org'
 
-
-      - name: Move Dashboards Reports to Plugins Dir
-        run: |
-          cd ..
-          mv dashboards-reports OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+      - name: Checkout Plugin
+        uses: actions/checkout@v1
+        with:
+          path: OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
@@ -134,9 +133,10 @@ jobs:
           node-version: ${{ steps.versions_step.outputs.node_version }}
           registry-url: 'https://registry.npmjs.org'
 
-
-      - name: Move Dashboards Reports to Plugins Dir
-        run: mv dashboards-reports OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+      - name: Checkout Plugin
+        uses: actions/checkout@v1
+        with:
+          path: OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
@@ -210,9 +210,10 @@ jobs:
           node-version: ${{ steps.versions_step.outputs.node_version }}
           registry-url: 'https://registry.npmjs.org'
 
-
-      - name: Move Dashboards Reports to Plugins Dir
-        run: mv dashboards-reports OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+      - name: Checkout Plugin
+        uses: actions/checkout@v1
+        with:
+          path: OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
