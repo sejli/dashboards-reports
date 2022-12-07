@@ -70,7 +70,7 @@ jobs:
 
       - name: Build Artifact
         run: |
-          cd OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+          pwd
           yarn build
           cd build
           mkdir -p ./{linux-x64,linux-arm64}/opensearch-dashboards/${{ env.PLUGIN_NAME }}
