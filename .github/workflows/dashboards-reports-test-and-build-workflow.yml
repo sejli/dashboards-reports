@@ -92,13 +92,13 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: dashboards-reports-linux-x64
-          path: ./OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}/build/${{ env.ARTIFACT_NAME }}-${{ env.OPENSEARCH_PLUGIN_VERSION }}-linux-x64.zip
+          path: ./build/${{ env.ARTIFACT_NAME }}-${{ env.OPENSEARCH_PLUGIN_VERSION }}-linux-x64.zip
 
       - name: Upload Artifact For Linux arm64
         uses: actions/upload-artifact@v1
         with:
           name: dashboards-reports-linux-arm64
-          path: ./OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}/build/${{ env.ARTIFACT_NAME }}-${{ env.OPENSEARCH_PLUGIN_VERSION }}-linux-arm64.zip
+          path: ./build/${{ env.ARTIFACT_NAME }}-${{ env.OPENSEARCH_PLUGIN_VERSION }}-linux-arm64.zip
 
   # windows-build:
   #   runs-on: windows-latest
