@@ -35,8 +35,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
 
-      - name: Move Dashboards Reports to Plugins Dir
-        run: mv dashboards-reports ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+      - name: Checkout Plugin
+        uses: actions/checkout@v1
+        with:
+          path: ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
@@ -128,8 +130,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
 
-      - name: Move Dashboards Reports to Plugins Dir
-        run: mv dashboards-reports ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+      - name: Checkout Plugin
+        uses: actions/checkout@v1
+        with:
+          path: ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
@@ -200,8 +204,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
 
-      - name: Move Dashboards Reports to Plugins Dir
-        run: mv dashboards-reports ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
+      - name: Checkout Plugin
+        uses: actions/checkout@v1
+        with:
+          path: ../OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}
 
       - name: Add Chromium Binary to Reporting for Testing
         run: |
