@@ -51,14 +51,14 @@ jobs:
         with:
           timeout_minutes: 30
           max_attempts: 3
-          command: cd OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}; yarn osd bootstrap
+          command: yarn osd bootstrap
 
       - name: Test
         uses: nick-invision/retry@v1
         with:
           timeout_minutes: 30
           max_attempts: 3
-          command: cd OpenSearch-Dashboards/plugins/${{ env.PLUGIN_NAME }}; yarn test --coverage
+          command: yarn test --coverage
 
       - name: Upload coverage
         uses: codecov/codecov-action@v1
